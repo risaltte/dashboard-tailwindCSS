@@ -16,13 +16,13 @@
 </head>
 
 <body 
-	class="bg-gray-900 md:flex" 
+	class="bg-slate-50 md:flex" 
 	x-data="sidebar"
 >
 	<!-- Sidebar -->
 	<aside 
 		x-show="openSidebar"
-		class="flex flex-col bg-slate-900 text-white w-64 h-screen absolute left-0 top-0 bottom-0 z-10 md:fixed"
+		class="flex flex-col bg-slate-900 text-white w-64 h-screen absolute left-0 top-0 bottom-0 z-10"
 	>
 		<div class="text-2xl border-b border-slate-300 m-2 py-2 text-center">
 			<i class="fa-regular fa-copyright"></i> LogoMarca
@@ -67,7 +67,7 @@
 			<i class="fa-solid fa-angles-left"></i>
 		</button>
 
-		<div class="py-1 mx-2 border-t border-slate-300">
+		<div class="py-1 mx-2 border-t border-slate-300 hover:cursor-pointer hover:brightness-75">
 			<div class="flex py-2 items-center gap-2">
 				<img
 					class="w-8 h-8 rounded-full"
@@ -80,10 +80,12 @@
 	</aside>
 
 	<main 
-		class="md:flex md:flex-1 md:h-full"
+		class="flex flex-col md:flex md:flex-1 md:h-full"
 		x-bind:class="{'md:ml-64': openSidebar}"
 	>
-		<header class="fixed top-0 right-0 flex w-full justify-between items-center p-2 border-b border-slate-300 bg-slate-950 text-slate-100">
+		<header 
+			class="fixed top-0 right-0 flex justify-between items-center w-full h-14 p-2 border-b border-slate-300 bg-slate-950 text-slate-100"
+		>
 			<button 
 				@click="toggleSidebar"
 				class="mx-4"
@@ -93,17 +95,24 @@
 	
 			<div class="flex justify-between items-center">
 				<div class="flex gap-3 border-r border-slate-500 pr-6">
-					<div class="relative">
+					<a 
+						href="#"
+						class="relative hover:brightness-75"
+					>
+
 						<i class="fa-regular fa-envelope"></i>
-					</div>
+					</a>
 	
-					<div class="relative">
+					<a 
+						href="#"
+						class="relative hover:brightness-75"
+					>
 						<i class="fa-regular fa-bell"></i>
 						<span class="absolute -top-1 -right-2 bg-red-700 text-white text-xs rounded-full px-1">2</span>
-					</div>
+					</a>
 				</div>
 	
-				<div class="flex py-1 items-center gap-2 mx-4">
+				<div class="flex py-1 items-center gap-2 mx-4 hover:cursor-pointer">
 					<img
 						class="w-8 h-8 rounded-full"
 						src="./images/user-avatar.jpg" 
@@ -114,58 +123,7 @@
 		</header>
 
 		<!-- Content -->
-		<div class="p-2 bg-slate-50 md:h-full w-full">
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
+		<div class="w-full p-2 mt-14 bg-slate-50 md:p-4">
 			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
 			</div>				
