@@ -61,7 +61,7 @@
 
 		<!-- Button close sidebar -->
 		<button 
-			@click="toggle"
+			@click="toggleSidebar"
 			class="absolute right-0 top-1/2 p-2 h-8 text-lg font-thin animate-pulse"
 		>
 			<i class="fa-solid fa-angles-left"></i>
@@ -80,12 +80,12 @@
 	</aside>
 
 	<main 
-		class="md:flex-1 md:h-full "
-		x-bind:class="{'md:ml-64':  openSidebar}"
-		>
+		class="md:flex-1 md:h-full"
+		x-bind:class="{'md:ml-64': openSidebar}"
+	>
 		<header class="flex justify-between items-center p-2 border-b border-slate-400 bg-slate-950 text-slate-100">
 			<button 
-				@click="toggle"
+				@click="toggleSidebar"
 				class="mx-4"
 			>
 				<i class="fa-solid fa-bars"></i>
@@ -178,7 +178,7 @@
 			Alpine.data('sidebar', () => ({
 				openSidebar: true,
 
-				toggle() {
+				toggleSidebar() {
 					this.openSidebar = !this.openSidebar;
 				}
 			}))
