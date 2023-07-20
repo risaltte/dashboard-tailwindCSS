@@ -15,41 +15,14 @@
 	<title>Dashboard</title>
 </head>
 
-<body class="bg-slate-800" x-data="sidebar">
-	<header class="flex justify-between items-center p-2 border-b border-slate-400 bg-slate-950 text-slate-100">
-		<button 
-			@click="toggle"
-			class="mx-4"
-		>
-			<i class="fa-solid fa-bars"></i>
-		</button>
-
-		<div class="flex justify-between items-center">
-			<div class="flex gap-3 border-r border-slate-500 pr-6">
-				<div class="relative">
-					<i class="fa-regular fa-envelope"></i>
-				</div>
-
-				<div class="relative">
-					<i class="fa-regular fa-bell"></i>
-					<span class="absolute -top-1 -right-2 bg-red-700 text-white text-xs rounded-full px-1">2</span>
-				</div>
-			</div>
-
-			<div class="flex py-1 items-center gap-2 mx-4">
-				<img
-					class="w-8 h-8 rounded-full"
-					src="./images/user-avatar.jpg" 
-					alt="User avatar"
-				>
-			</div>
-		</div>
-	</header>
-
+<body 
+	class="bg-gray-900 md:flex" 
+	x-data="sidebar"
+>
 	<!-- Sidebar -->
 	<aside 
 		x-show="openSidebar"
-		class="flex flex-col bg-gray-900 text-white w-64 h-screen absolute left-0 top-0 bottom-0"
+		class="flex flex-col bg-slate-900 text-white w-64 h-screen absolute left-0 top-0 bottom-0 z-10 md:z-0 md:fixed"
 	>
 		<div class="text-2xl border-b border-slate-400 m-2 py-2 text-center">
 			<i class="fa-regular fa-copyright"></i> LogoMarca
@@ -106,16 +79,96 @@
 		</div>
 	</aside>
 
-	<main class="p-2">
-		<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-		</div>		
-		<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-		</div>		
-		<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-		</div>		
+	<main 
+		class="md:flex-1 md:h-full "
+		x-bind:class="{'md:ml-64':  openSidebar}"
+		>
+		<header class="flex justify-between items-center p-2 border-b border-slate-400 bg-slate-950 text-slate-100">
+			<button 
+				@click="toggle"
+				class="mx-4"
+			>
+				<i class="fa-solid fa-bars"></i>
+			</button>
+	
+			<div class="flex justify-between items-center">
+				<div class="flex gap-3 border-r border-slate-500 pr-6">
+					<div class="relative">
+						<i class="fa-regular fa-envelope"></i>
+					</div>
+	
+					<div class="relative">
+						<i class="fa-regular fa-bell"></i>
+						<span class="absolute -top-1 -right-2 bg-red-700 text-white text-xs rounded-full px-1">2</span>
+					</div>
+				</div>
+	
+				<div class="flex py-1 items-center gap-2 mx-4">
+					<img
+						class="w-8 h-8 rounded-full"
+						src="./images/user-avatar.jpg" 
+						alt="User avatar"
+					>
+				</div>
+			</div>
+		</header>
+
+		<div class="p-2 bg-slate-50 md:h-full">
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>		
+			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
+			</div>
+		</div>	
 	</main>
   
 	<script type="module" src="/main.js"></script>
@@ -123,7 +176,7 @@
 	<script>
 		document.addEventListener('alpine:init', () => {
 			Alpine.data('sidebar', () => ({
-				openSidebar: false,
+				openSidebar: true,
 
 				toggle() {
 					this.openSidebar = !this.openSidebar;
