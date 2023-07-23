@@ -31,7 +31,7 @@
 		<div class="flex flex-col flex-1 gap-1 px-2 py-2">
 			<a 
 				href="#"
-				class="p-2 rounded px-4 hover:pl-8 hover:bg-black/20 transition-all ease-in-out duration-200"	
+				class="p-2 rounded px-4 pl-8 bg-slate-500 hover:pl-8 transition-all ease-in-out duration-200"	
 			>
 				<span class="text-lg font-thin"><i class="fa-solid fa-gauge"></i></span>
 				<span class="ml-2">Dashboard</span>
@@ -124,19 +124,277 @@
 
 		<!-- Content -->
 		<div class="w-full p-2 mt-14 bg-slate-50 md:p-4">
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
-			<div class="p-2 border rounded mb-4 bg-slate-700 text-slate-100">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque eveniet deleniti doloremque dolor non. 
-			</div>				
+			<h1 class="text-2xl font-semibold"><i class="fa-solid fa-gauge"></i> Dashboard</h1>
+
+			<!-- Breadcrumbs -->
+			<ol class="flex items-center text-xs">
+				<li class="flex items-center">
+					<a href="index.html" class="flex items-center p-1 hover:underline hover:text-slate-700">
+						<i class="fa-solid fa-house"></i>
+					</a>
+					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
+				</li>
+				<li class="italic">Dashboard</li>
+			</ol>
+
+			<hr class="mt-2">
+
+			<div class="mt-4 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
+						<span class="p-4 text-4xl text-slate-50">
+							<i class="fa-brands fa-youtube"></i>
+						</span>
+					</div>
+
+					<div class="flex-1 h-full flex flex-col justify-between py-1">
+						<div class="font-light">
+							Total cursos:
+						</div>
+						<div>
+							<span class="font-semibold">50</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
+						<span class="p-4 text-4xl text-slate-50">
+							<i class="fa-solid fa-user-group"></i>
+						</span>
+					</div>
+
+					<div class="flex-1 h-full flex flex-col justify-between py-1">
+						<div class="font-light">
+							Total usuários:
+						</div>
+						<div>
+							<span class="font-semibold">1.521</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
+						<span class="p-4 text-4xl text-slate-50">
+							<i class="fa-solid fa-user-plus"></i>
+						</span>
+					</div>
+
+					<div class="flex-1 h-full flex flex-col justify-between py-1">
+						<div class="font-light">
+							Novos usuários:
+						</div>
+						<div>
+							<span class="font-semibold">7</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
+						<span class="p-4 text-4xl text-slate-50">
+							<i class="fa-solid fa-wifi"></i>
+						</span>
+					</div>
+
+					<div class="flex-1 h-full flex flex-col justify-between py-1">
+						<div class="font-light">
+							Usuários online:
+						</div>
+						<div>
+							<span class="font-semibold">728</span>
+						</div>
+					</div>
+				</div>
+			</div>			
+			
+			
+			<h2 
+				class="text-lg mt-12 border-t border-l border-r py-1 px-2 text-center bg-slate-300 text-slate-700 rounded-t-md"
+			>
+				Cursos mais assistidos
+			</h2>
+
+			<table class="w-full">
+				<thead>
+					<tr class="text-left">
+						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center">#</th>
+						<th class="border py-1 px-2 text-sm md:text-base font-normal">Curso</th>
+						<th class="border py-1 px-2 text-sm md:text-base font-normal hidden lg:table-cell">Instrutor</th>
+						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center hidden lg:table-cell">Nível</th>
+						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center">Alunos</th>
+						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center hidden md:table-cell">Avaliação</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border py-1 px-2 font-light text-sm text-center">1º</td>
+						<td class="border py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 mb-0.5">Laravel do básico ao avançado</div>
+							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Antônio Guimarães</div>
+							<div class="text-xs mb-0.5 lg:hidden">
+								Nível: Básico, Intermediário e Avançado
+							</div>
+							<div class="md:hidden">
+								<span class="text-xs">Avaliação: 4,5</span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+							</div>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Antônio Guimarães</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 text-green-800">Básico</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 text-gray-800">Avançado</span>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm text-center">628</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+							<span>4,5</span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="border py-1 px-2 font-light text-sm text-center">2º</td>
+						<td class="border py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 mb-0.5">ReactJS - NextJS</div>
+							<div class="text-xs mb-0.5 lg:hidden">Instrutor: João da Silva</div>
+							<div class="text-xs mb-0.5 lg:hidden">
+								Nível:Intermediário
+							</div>
+							<div class="md:hidden">
+								<span class="text-xs">Avaliação: 4,0</span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+							</div>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">João da Silva</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm text-center">601</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+							<span>4,0</span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="border py-1 px-2 font-light text-sm text-center">3º</td>
+						<td class="border py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 mb-0.5">VueJS</div>
+							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Mauro José Borges</div>
+							<div class="text-xs mb-0.5 lg:hidden">
+								Nível:Avançado
+							</div>
+							<div class="md:hidden">
+								<span class="text-xs">Avaliação: 4,1</span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+							</div>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Mauro José Borges</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 text-gray-800">Avançado</span>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm text-center">507</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+							<span>4,0</span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="border py-1 px-2 font-light text-sm text-center">4º</td>
+						<td class="border py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 mb-0.5">PHP 8</div>
+							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Caio Martins</div>
+							<div class="text-xs mb-0.5 lg:hidden">
+								Nível: Básico e Intermediário
+							</div>
+							<div class="md:hidden">
+								<span class="text-xs">Avaliação: 4,8</span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+							</div>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Caio Martins</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 text-green-800">Básico</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm text-center">438</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+							<span>4,8</span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="border py-1 px-2 font-light text-sm text-center">5º</td>
+						<td class="border py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 mb-0.5">NodeJS</div>
+							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Felipe Silveira</div>
+							<div class="text-xs mb-0.5 lg:hidden">
+								Nível: Básico e Intermediário
+							</div>
+							<div class="md:hidden">
+								<span class="text-xs">Avaliação: 4,8</span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+							</div>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Felipe Silveira</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 text-green-800">Básico</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+						</td>
+						<td class="border py-1 px-2 font-light text-sm text-center">421</td>
+						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+							<span>4,8</span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>	
+
 	</main>
   
 	<script type="module" src="/main.js"></script>
@@ -144,7 +402,7 @@
 	<script>
 		document.addEventListener('alpine:init', () => {
 			Alpine.data('sidebar', () => ({
-				openSidebar: true,
+				openSidebar: false,
 
 				toggleSidebar() {
 					this.openSidebar = !this.openSidebar;
