@@ -22,7 +22,7 @@
 	<!-- Sidebar -->
 	<aside 
 		x-show="openSidebar"
-		class="flex flex-col bg-slate-900 text-white w-64 h-screen absolute left-0 top-0 bottom-0 z-10"
+		class="flex flex-col bg-slate-900 text-white w-64 h-screen fixed left-0 top-0 bottom-0 z-10"
 	>
 		<div class="text-2xl border-b border-slate-300 m-2 py-2 text-center">
 			<i class="fa-regular fa-copyright"></i> LogoMarca
@@ -207,8 +207,7 @@
 						</div>
 					</div>
 				</div>
-			</div>			
-			
+			</div>
 			
 			<h2 
 				class="text-lg mt-12 border-t border-l border-r py-1 px-2 text-center bg-slate-300 text-slate-700 rounded-t-md"
@@ -216,9 +215,9 @@
 				Cursos mais assistidos
 			</h2>
 
-			<table class="w-full">
+			<table class="w-full shadow-md">
 				<thead>
-					<tr class="text-left">
+					<tr class="text-left bg-white">
 						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center">#</th>
 						<th class="border py-1 px-2 text-sm md:text-base font-normal">Curso</th>
 						<th class="border py-1 px-2 text-sm md:text-base font-normal hidden lg:table-cell">Instrutor</th>
@@ -228,7 +227,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr class="hover:bg-slate-100">
 						<td class="border py-1 px-2 font-light text-sm text-center">1º</td>
 						<td class="border py-1 px-2 font-light text-sm">
 							<div class="font-medium truncate text-gray-600 mb-0.5">Laravel do básico ao avançado</div>
@@ -262,7 +261,7 @@
 						</td>
 					</tr>
 
-					<tr>
+					<tr class="hover:bg-slate-100">
 						<td class="border py-1 px-2 font-light text-sm text-center">2º</td>
 						<td class="border py-1 px-2 font-light text-sm">
 							<div class="font-medium truncate text-gray-600 mb-0.5">ReactJS - NextJS</div>
@@ -294,7 +293,7 @@
 						</td>
 					</tr>
 
-					<tr>
+					<tr class="hover:bg-slate-100">
 						<td class="border py-1 px-2 font-light text-sm text-center">3º</td>
 						<td class="border py-1 px-2 font-light text-sm">
 							<div class="font-medium truncate text-gray-600 mb-0.5">VueJS</div>
@@ -326,7 +325,7 @@
 						</td>
 					</tr>
 
-					<tr>
+					<tr class="hover:bg-slate-100">
 						<td class="border py-1 px-2 font-light text-sm text-center">4º</td>
 						<td class="border py-1 px-2 font-light text-sm">
 							<div class="font-medium truncate text-gray-600 mb-0.5">PHP 8</div>
@@ -359,7 +358,7 @@
 						</td>
 					</tr>
 
-					<tr>
+					<tr class="hover:bg-slate-100">
 						<td class="border py-1 px-2 font-light text-sm text-center">5º</td>
 						<td class="border py-1 px-2 font-light text-sm">
 							<div class="font-medium truncate text-gray-600 mb-0.5">NodeJS</div>
