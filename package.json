@@ -15,6 +15,7 @@
     "vite": "^4.4.0"
   },
   "dependencies": {
-    "alpinejs": "^3.12.3"
+    "alpinejs": "^3.12.3",
+    "tippy.js": "^6.3.7"
   }
 }
