@@ -67,14 +67,39 @@
 			<i class="fa-solid fa-angles-left"></i>
 		</button>
 
-		<div class="py-1 mx-2 border-t border-slate-300 hover:cursor-pointer hover:brightness-75">
-			<div class="flex py-2 items-center gap-2">
+		<!-- User preferences -->
+		<div class="mx-2 border-t border-slate-300 relative">
+			<!-- Tooltip user preferences -->
+			<div 
+				x-show="openUserPreferencesSidebar"
+				class="py-2 w-40 rounded border-slate-90/30 absolute left-2 bottom-14 z-30 bg-slate-700"
+			>
+				<ul class="flex flex-col">
+					<li class="px-4 py-1 hover:bg-slate-800">
+						<a href="#" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-gear"></i> Configurações</a>
+					</li>
+					<li class="px-4 py-1 hover:bg-slate-800">
+						<a href="#" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-user"></i> Perfil</a>
+					</li>
+					<hr class="px-4 my-1 border-slate-950/30">
+					<li class="px-4 py-1 hover:bg-slate-800">
+						<a href="#" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
+					</li>
+				</ul>
+			</div>
+
+			<div 
+				@click="toggleOpenUserPreferencesSidebar"
+				class="flex items-center justify-start gap-2 w-2/3 py-4 px-2 hover:cursor-pointer"
+			>
 				<img
 					class="w-8 h-8 rounded-full"
 					src="./images/user-avatar.jpg" 
 					alt="User avatar"
 				>
-				<span class="text-sm">John Doe</span>
+				<span class="text-sm">John Doe</span> 
+				<span x-show="!openUserPreferencesSidebar"><i class="fa-solid fa-caret-down"></i></span>
+				<span x-show="openUserPreferencesSidebar"><i class="fa-solid fa-caret-up"></i></span>
 			</div>
 		</div>
 	</aside>
@@ -124,7 +149,7 @@
 
 		<!-- Content -->
 		<div class="w-full p-2 mt-14 bg-slate-50 md:p-4">
-			<h1 class="text-2xl font-semibold"><i class="fa-solid fa-gauge"></i> Dashboard</h1>
+			<h1 class="text-2xl text-slate-800"><i class="fa-solid fa-gauge"></i> Dashboard</h1>
 
 			<!-- Breadcrumbs -->
 			<ol class="flex items-center text-xs">
@@ -402,11 +427,17 @@
 		document.addEventListener('alpine:init', () => {
 			Alpine.data('sidebar', () => ({
 				openSidebar: false,
+				openUserPreferencesSidebar: false,
 
 				toggleSidebar() {
 					this.openSidebar = !this.openSidebar;
+					this.openUserPreferencesSidebar = false
+				},
+
+				toggleOpenUserPreferencesSidebar() {
+					this.openUserPreferencesSidebar = !this.openUserPreferencesSidebar;
 				}
-			}))
+			}));
 		});
 	</script>
   </body>
