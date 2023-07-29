@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" x-data="{dark: false}" x-bind:class="{'dark': dark}">
 
 <head>
 	<meta charset="UTF-8" />
@@ -121,6 +121,11 @@
 	
 			<div class="flex justify-between items-center">
 				<div class="flex gap-4 border-r border-slate-500 pr-6">
+					<button @click="dark = !dark" class="mr-4">
+						<span x-show="dark"><i class="far fa-sun"></i></span>
+						<span x-show="!dark"><i class="far fa-moon"></i></span>
+					</button>
+
 					<a 
 						href="#"
 						class="relative hover:brightness-75"

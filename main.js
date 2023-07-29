@@ -4,8 +4,19 @@ import tippy from 'tippy.js';
 // CSS TippyJS
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
- 
-window.Alpine = Alpine; 
-Alpine.start();
 
 window.tippy = tippy;
+
+
+// DarkMode
+// Alpine.data('theme', () => ({
+//     dark: false,
+
+//     toggleDark: () => {
+//         console.log('dark');
+//         this.dark = !this.dark;
+//     }
+// }));
+
+window.Alpine = Alpine; 
+Alpine.start();
