@@ -16,7 +16,7 @@
 </head>
 
 <body 
-	class="bg-slate-50 md:flex" 
+	class="antialiased md:flex dark:bg-slate-900 bg-white text-slate-500 dark:text-slate-400" 
 	x-data="sidebar"
 >
 	<!-- Sidebar -->
@@ -24,7 +24,7 @@
 		x-show="openSidebar"
 		class="flex flex-col bg-slate-900 text-white w-64 h-screen fixed left-0 top-0 bottom-0 z-10"
 	>
-		<div class=" flex items-center justify-center text-2xl border-b border-slate-300 mx-2 py-2 text-center h-14">
+		<div class="flex items-center justify-center mx-2 py-2 h-14 text-2xl text-center border-b border-slate-300">
 			RCursos
 		</div>
 
@@ -109,26 +109,26 @@
 		x-bind:class="{'md:ml-64': openSidebar}"
 	>
 		<header 
-			class="fixed top-0 right-0 left-0 h-14 flex justify-between items-center p-2 border-b border-slate-300 bg-slate-950 text-slate-100"
+			class="fixed top-0 right-0 left-0 h-14 flex justify-between items-center p-2 border-b border-slate-900/10 dark:border-slate-300/10 dark:bg-gradient-to-r dark:from-sky-950 dark:to-slate-900"
 			x-bind:class="{'md:ml-64': openSidebar}"
 		>
 			<button 
 				@click="toggleSidebar"
-				class="mx-4"
+				class="mx-4 p-1 hover:brightness-75 transition-all text-brand-p"
 			>
 				<i class="fa-solid fa-bars"></i>
 			</button>
 	
 			<div class="flex justify-between items-center">
 				<div class="flex gap-4 border-r border-slate-500 pr-6">
-					<button @click="dark = !dark" class="mr-4">
-						<span x-show="dark"><i class="far fa-sun"></i></span>
-						<span x-show="!dark"><i class="far fa-moon"></i></span>
+					<button @click="dark = !dark" class="p-1 mr-4 hover:brightness-125 transition-all">
+						<span x-show="dark" class="text-yellow-500"><i class="far fa-sun"></i></span>
+						<span x-show="!dark" class="text-blue-500"><i class="far fa-moon"></i></span>
 					</button>
 
 					<a 
 						href="#"
-						class="relative hover:brightness-75"
+						class="p-1 relative hover:brightness-75"
 						id="messages-notify"
 						data-messages="3"
 					>
@@ -139,7 +139,7 @@
 	
 					<a 
 						href="#"
-						class="relative hover:brightness-75"
+						class="p-1 relative hover:brightness-75"
 						id="notifications"
 					>
 						<i class="fa-regular fa-bell"></i>
