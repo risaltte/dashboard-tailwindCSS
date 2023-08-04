@@ -158,271 +158,272 @@
 		</header>
 
 		<!-- Content -->
-		<div class="w-full p-2 mt-14 bg-slate-50 md:p-4">
-			<h1 class="text-2xl text-slate-800"><i class="fa-solid fa-gauge"></i> Dashboard</h1>
+		<div class="w-full p-2 mt-14 md:p-4">
+			<h1 class="text-2xl text-slate-800 dark:text-slate-50"><i class="fa-solid fa-gauge"></i> Dashboard</h1>
 
 			<!-- Breadcrumbs -->
 			<ol class="flex items-center text-xs">
 				<li class="flex items-center">
-					<a href="index.html" class="flex items-center p-1 hover:underline hover:text-slate-700">
+					<a href="index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
 						<i class="fa-solid fa-house"></i>
 					</a>
 					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
 				</li>
-				<li class="italic">Dashboard</li>
+				<li class="italic text-brand-p">Dashboard</li>
 			</ol>
 
-			<hr class="mt-2">
+			<hr class="mt-2 dark:border-slate-600">
 
+			<!-- Cards -->
 			<div class="mt-4 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
-					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
-						<span class="p-4 text-4xl text-slate-50">
-							<i class="fa-brands fa-youtube"></i>
+				<div class="flex items-center p-2 rounded dark:bg-slate-800 border dark:border-slate-400 shadow-lg dark:shadow-md shadow-slate-300">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-400 rounded">
+						<span class="p-4 text-4xl text-white">
+							<i class="fa-regular fa-circle-play"></i>
 						</span>
 					</div>
 
 					<div class="flex-1 h-full flex flex-col justify-between py-1">
-						<div class="font-light">
+						<div class="font-light text-slate-600 dark:text-slate-200">
 							Total cursos:
 						</div>
 						<div>
-							<span class="font-semibold">50</span>
+							<span class="font-semibold dark:text-slate-100">50</span>
 						</div>
 					</div>
 				</div>
-				
-				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
-					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
-						<span class="p-4 text-4xl text-slate-50">
+
+				<div class="flex items-center p-2 rounded dark:bg-slate-800 border dark:border-slate-400 shadow-lg dark:shadow-md shadow-slate-300">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-400 rounded">
+						<span class="p-4 text-4xl text-white">
 							<i class="fa-solid fa-user-group"></i>
 						</span>
 					</div>
 
 					<div class="flex-1 h-full flex flex-col justify-between py-1">
-						<div class="font-light">
+						<div class="font-light text-slate-600 dark:text-slate-200">
 							Total usuários:
 						</div>
 						<div>
-							<span class="font-semibold">1.521</span>
+							<span class="font-semibold dark:text-slate-100">1521</span>
 						</div>
 					</div>
 				</div>
-
-				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
-					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
-						<span class="p-4 text-4xl text-slate-50">
+				
+				<div class="flex items-center p-2 rounded dark:bg-slate-800 border dark:border-slate-400 shadow-lg dark:shadow-md shadow-slate-300">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-400 rounded">
+						<span class="p-4 text-4xl text-white">
 							<i class="fa-solid fa-user-plus"></i>
 						</span>
 					</div>
 
 					<div class="flex-1 h-full flex flex-col justify-between py-1">
-						<div class="font-light">
+						<div class="font-light text-slate-600 dark:text-slate-200">
 							Novos usuários:
 						</div>
 						<div>
-							<span class="font-semibold">7</span>
+							<span class="font-semibold dark:text-slate-100">7</span>
 						</div>
 					</div>
 				</div>
-				
-				<div class="flex items-center p-2 border shadow-lg shadow-slate-300 rounded">
-					<div class="flex justify-center items-center w-20 mr-2 bg-slate-600 rounded">
-						<span class="p-4 text-4xl text-slate-50">
+
+				<div class="flex items-center p-2 rounded dark:bg-slate-800 border dark:border-slate-400 shadow-lg dark:shadow-md shadow-slate-300">
+					<div class="flex justify-center items-center w-20 mr-2 bg-slate-400 rounded">
+						<span class="p-4 text-4xl text-white">
 							<i class="fa-solid fa-wifi"></i>
 						</span>
 					</div>
 
 					<div class="flex-1 h-full flex flex-col justify-between py-1">
-						<div class="font-light">
+						<div class="font-light text-slate-600 dark:text-slate-200">
 							Usuários online:
 						</div>
 						<div>
-							<span class="font-semibold">728</span>
+							<span class="font-semibold dark:text-slate-100">728</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			
 			<h2 
-				class="text-lg mt-12 border-t border-l border-r py-1 px-2 text-center bg-slate-300 text-slate-700 rounded-t-md"
+				class="text-lg mt-12 border-t border-l border-r dark:border-slate-400 py-1 px-2 text-center bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-100 rounded-t-md"
 			>
 				Cursos mais assistidos
 			</h2>
 
 			<table class="w-full shadow-md">
 				<thead>
-					<tr class="text-left bg-white">
-						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center">#</th>
-						<th class="border py-1 px-2 text-sm md:text-base font-normal">Curso</th>
-						<th class="border py-1 px-2 text-sm md:text-base font-normal hidden lg:table-cell">Instrutor</th>
-						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center hidden lg:table-cell">Nível</th>
-						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center">Alunos</th>
-						<th class="border py-1 px-2 text-sm md:text-base font-normal text-center hidden md:table-cell">Avaliação</th>
+					<tr class="text-left bg-white dark:bg-slate-900 dark:text-slate-200">
+						<th class="border dark:border-slate-400 py-1 px-2 text-sm md:text-base font-normal text-center">#</th>
+						<th class="border dark:border-slate-400 py-1 px-2 text-sm md:text-base font-normal">Curso</th>
+						<th class="border dark:border-slate-400 py-1 px-2 text-sm md:text-base font-normal hidden lg:table-cell">Instrutor</th>
+						<th class="border dark:border-slate-400 py-1 px-2 text-sm md:text-base font-normal text-center hidden lg:table-cell">Nível</th>
+						<th class="border dark:border-slate-400 py-1 px-2 text-sm md:text-base font-normal text-center">Alunos</th>
+						<th class="border dark:border-slate-400 py-1 px-2 text-sm md:text-base font-normal text-center hidden md:table-cell">Avaliação</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="hover:bg-slate-100">
-						<td class="border py-1 px-2 font-light text-sm text-center">1º</td>
-						<td class="border py-1 px-2 font-light text-sm">
-							<div class="font-medium truncate text-gray-600 mb-0.5">Laravel do básico ao avançado</div>
+					<tr class="hover:bg-slate-100 dark:hover:bg-slate-800/70 dark:text-slate-300">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">1º</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 dark:text-slate-300 mb-0.5">Laravel do básico ao avançado</div>
 							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Antônio Guimarães</div>
 							<div class="text-xs mb-0.5 lg:hidden">
 								Nível: Básico, Intermediário e Avançado
 							</div>
 							<div class="md:hidden">
 								<span class="text-xs">Avaliação: 4,5</span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>
 							</div>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Antônio Guimarães</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 text-green-800">Básico</span>
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 text-gray-800">Avançado</span>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm hidden lg:table-cell">Antônio Guimarães</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 dark:bg-green-300 text-green-800 dark:text-green-700">Básico</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 dark:bg-yellow-300 text-yellow-800 dark:text-yellow-700">Intermediário</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 dark:bg-gray-300 text-gray-800 dark:text-gray-700">Avançado</span>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm text-center">628</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">628</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden md:table-cell">
 							<span>4,5</span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>
 						</td>
 					</tr>
 
-					<tr class="hover:bg-slate-100">
-						<td class="border py-1 px-2 font-light text-sm text-center">2º</td>
-						<td class="border py-1 px-2 font-light text-sm">
-							<div class="font-medium truncate text-gray-600 mb-0.5">ReactJS - NextJS</div>
+					<tr class="hover:bg-slate-100 dark:hover:bg-slate-800/70 dark:text-slate-300">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">2º</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 dark:text-slate-300 mb-0.5">ReactJS - NextJS</div>
 							<div class="text-xs mb-0.5 lg:hidden">Instrutor: João da Silva</div>
 							<div class="text-xs mb-0.5 lg:hidden">
 								Nível:Intermediário
 							</div>
 							<div class="md:hidden">
 								<span class="text-xs">Avaliação: 4,0</span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-regular fa-star"></i></span>
 							</div>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">João da Silva</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm hidden lg:table-cell">João da Silva</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 dark:bg-yellow-300 text-yellow-800 dark:text-yellow-700">Intermediário</span>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm text-center">601</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">601</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden md:table-cell">
 							<span>4,0</span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-regular fa-star"></i></span>
 						</td>
 					</tr>
 
-					<tr class="hover:bg-slate-100">
-						<td class="border py-1 px-2 font-light text-sm text-center">3º</td>
-						<td class="border py-1 px-2 font-light text-sm">
-							<div class="font-medium truncate text-gray-600 mb-0.5">VueJS</div>
+					<tr class="hover:bg-slate-100 dark:hover:bg-slate-800/70 dark:text-slate-300">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">3º</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 dark:text-slate-300 mb-0.5">VueJS</div>
 							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Mauro José Borges</div>
 							<div class="text-xs mb-0.5 lg:hidden">
 								Nível:Avançado
 							</div>
 							<div class="md:hidden">
 								<span class="text-xs">Avaliação: 4,1</span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-regular fa-star"></i></span>
 							</div>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Mauro José Borges</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 text-gray-800">Avançado</span>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm hidden lg:table-cell">Mauro José Borges</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 dark:bg-gray-300 text-gray-800 dark:text-gray-700">Avançado</span>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm text-center">507</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">507</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden md:table-cell">
 							<span>4,0</span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-regular fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-regular fa-star"></i></span>
 						</td>
 					</tr>
 
-					<tr class="hover:bg-slate-100">
-						<td class="border py-1 px-2 font-light text-sm text-center">4º</td>
-						<td class="border py-1 px-2 font-light text-sm">
-							<div class="font-medium truncate text-gray-600 mb-0.5">PHP 8</div>
+					<tr class="hover:bg-slate-100 dark:hover:bg-slate-800/70 dark:text-slate-300">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">4º</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 dark:text-slate-300 mb-0.5">PHP 8</div>
 							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Caio Martins</div>
 							<div class="text-xs mb-0.5 lg:hidden">
 								Nível: Básico e Intermediário
 							</div>
 							<div class="md:hidden">
 								<span class="text-xs">Avaliação: 4,8</span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>
 							</div>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Caio Martins</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 text-green-800">Básico</span>
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm hidden lg:table-cell">Caio Martins</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 dark:bg-green-300 text-green-800 dark:text-green-700">Básico</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 dark:bg-yellow-300 text-yellow-800 dark:text-yellow-700">Intermediário</span>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm text-center">438</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">438</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden md:table-cell">
 							<span>4,8</span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>
 						</td>
 					</tr>
 
-					<tr class="hover:bg-slate-100">
-						<td class="border py-1 px-2 font-light text-sm text-center">5º</td>
-						<td class="border py-1 px-2 font-light text-sm">
-							<div class="font-medium truncate text-gray-600 mb-0.5">NodeJS</div>
+					<tr class="hover:bg-slate-100 dark:hover:bg-slate-800/70 dark:text-slate-300">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">5º</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm">
+							<div class="font-medium truncate text-gray-600 dark:text-slate-300 mb-0.5">NodeJS</div>
 							<div class="text-xs mb-0.5 lg:hidden">Instrutor: Felipe Silveira</div>
 							<div class="text-xs mb-0.5 lg:hidden">
 								Nível: Básico e Intermediário
 							</div>
 							<div class="md:hidden">
 								<span class="text-xs">Avaliação: 4,8</span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-								<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+								<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>
 							</div>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm hidden lg:table-cell">Felipe Silveira</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 text-green-800">Básico</span>
-							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 text-yellow-800">Intermediário</span>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm hidden lg:table-cell">Felipe Silveira</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden lg:table-cell">
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 dark:bg-green-300 text-green-800 dark:text-green-700">Básico</span>
+							<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 dark:bg-yellow-300 text-yellow-800 dark:text-yellow-700">Intermediário</span>
 						</td>
-						<td class="border py-1 px-2 font-light text-sm text-center">421</td>
-						<td class="border py-1 px-2 font-light text-sm text-center hidden md:table-cell">
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center">421</td>
+						<td class="border dark:border-slate-400 py-1 px-2 font-light text-sm text-center hidden md:table-cell">
 							<span>4,8</span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star"></i></span>
-							<span class="text-xs text-yellow-400"><i class="fa-solid fa-star-half-stroke"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+							<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>
 						</td>
 					</tr>
 				</tbody>
@@ -494,7 +495,7 @@
 					<span class="text-slate-400 font-normal">Bob Joe</span> abriu um novo tópico do fórum <span class="text-slate-400 font-medium">Javascript</span>
 				</div>
 				<div class="text-xs font-thin">
-					3 minutos atrás.
+					4 minutos atrás.
 				</div>
 			</div>
 		</div>
@@ -509,7 +510,7 @@
 	<script>
 		document.addEventListener('alpine:init', () => {
 			Alpine.data('sidebar', () => ({
-				openSidebar: true,
+				openSidebar: false,
 				openUserPreferencesSidebar: false,
 
 				toggleSidebar() {
