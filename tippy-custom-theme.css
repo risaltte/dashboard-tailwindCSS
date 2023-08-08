@@ -1,0 +1,27 @@
+.tippy-box[data-theme~="custom"]{
+    @apply bg-white dark:bg-slate-700 shadow-inner-custom dark:shadow-inner
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="top"] > .tippy-arrow:before {
+    @apply border-t-white dark:border-t-slate-700
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="bottom"] > .tippy-arrow:before {
+    @apply border-b-white dark:border-b-slate-700
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="left"] > .tippy-arrow:before {
+    @apply border-l-white dark:border-l-slate-700
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="right"] > .tippy-arrow:before {
+    @apply border-r-white dark:border-r-slate-700
+}
+
+.tippy-box[data-theme~="custom"] > .tippy-backdrop {
+    @apply bg-white dark:bg-slate-700
+}
+
+.tippy-box[data-theme~="custom"] > .tippy-svg-arrow {
+    @apply fill-white dark:fill-slate-700
+}
