@@ -23,9 +23,11 @@
 
     [type='checkbox'],
     [type='radio'] {
-        @apply rounded border-gray-300 dark:border-gray-500 text-slate-600 focus:ring-slate-500
+        @apply rounded border-gray-300 dark:border-gray-500 text-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 dark:focus:ring-slate-400
     }
 }
+
+
 
 body {
     -webkit-font-smoothing: antialiased;

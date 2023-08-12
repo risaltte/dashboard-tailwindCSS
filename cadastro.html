@@ -12,7 +12,7 @@
 	<!-- Tailwind -->
 	<link rel="stylesheet" href="style.css">
 
-	<title>Dashboard - Login</title>
+	<title>Dashboard - Cadastro</title>
 </head>
 
 <body 
@@ -30,15 +30,37 @@
 			class="flex flex-col gap-4 w-full sm:max-w-md m-auto shadow-inner-custom dark:shadow sm:rounded-xl border-slate-200 p-8 bg-white dark:bg-slate-800"
 		>
 			<p class="text-2xl text-center font-medium dark:text-slate-200">
-				<i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+				Criar conta
 			</p>
+
+			<p class="text-center text-sm">
+				Crie a sua conta. É totalmente gratuito!
+			</p>
+
+			<div>
+				<label for="name" class="block text-sm font-medium dark:text-slate-300">
+					Nome
+				</label>
+				<div class="mt-1">
+					<input id="name" name="name" type="text" required placeholder="Digite seu nome"> 
+				</div>
+			</div>
+
+			<div>
+				<label for="lastName" class="block text-sm font-medium dark:text-slate-300">
+					Sobrenome
+				</label>
+				<div class="mt-1">
+					<input id="lastName" name="lastName" type="text" required placeholder="Digite seu sobrenome">
+				</div>
+			</div>
 
 			<div>
 				<label for="email" class="block text-sm font-medium dark:text-slate-300">
 					E-mail
 				</label>
 				<div class="mt-1">
-					<input id="email" name="email" type="text" required placeholder="Digite seu e-mail"> 
+					<input id="email" name="email" type="text" required placeholder="Digite seu melhor e-mail"> 
 				</div>
 			</div>
 
@@ -51,25 +73,31 @@
 				</div>
 			</div>
 
+			<div class="text-sm text-justify">
+				<input type="checkbox" name="terms">
+				<label 
+					for="terms"
+				>
+					Declaro que estou de acordo com os 
+					<a href="#" class="font-medium text-violet-500 dark:text-violet-400 hover:text-violet-600 dark:hover:text-violet-300 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 dark:focus:ring-slate-400">Termos de Uso</a> & 
+					<a href="#" class="font-medium text-violet-500 dark:text-violet-400 hover:text-violet-600 dark:hover:text-violet-300 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 dark:focus:ring-slate-400">Política de Privacidade</a>.
+				</label>
+			</div>
+
 			<button 
 				type="submit" 
 				class="w-full mt-1 bg-slate-500 text-white py-2 px-4 rounded-lg font-medium hover:brightness-110 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-400"
 			>
-				Entrar
+				Criar conta
 			</button>
 
-			<div class="flex justify-between items-center text-sm font-medium">
+			<div class="flex items-center justify-center mt-2 text-sm">
+				<span class="mr-1 font-light">Já possui uma conta? Faça</span>
 				<a 
-					href="recovey-password.html" 
-					class="hover:text-slate-700 dark:hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 dark:focus:ring-slate-400"
+					href="login.html" 
+					class="font-medium hover:text-slate-700 dark:hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 dark:focus:ring-slate-400 underline"
 				>
-					Esqueceu a senha? <i class="fa-solid fa-unlock"></i>
-				</a>
-				<a 
-					href="cadastro.html" 
-					class="font-medium text-violet-500 dark:text-violet-400 hover:text-violet-600 dark:hover:text-violet-300 transition-colors focus:outline-none focus:ring-2"
-				>
-					Criar conta <i class="fa-solid fa-arrow-right-from-bracket"></i>
+					Login
 				</a>
 			</div>
 		</form>
