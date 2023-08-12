@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: [
-		"./index.html",
+		"./**/*.html",
 		"./**/*.{js}",
 	],
 	theme: {
@@ -15,7 +15,9 @@ export default {
 			}
 		},		
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/forms'),
+	],
 	darkMode: 'class'
 }
 

@@ -23,16 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateTooltipMessahes = document.querySelector('#templateTooltipMessahes');
     const templatePopoverNotifications = document.querySelector('#templatePopoverNotifications');
 
-    tippy('#messages-notify', {
-        content: templateTooltipMessahes.innerHTML,
-        allowHTML: true,
-    });
+    if (templateTooltipMessahes) {       
+        tippy('#messages-notify', {
+            content: templateTooltipMessahes.innerHTML,
+            allowHTML: true,
+        });
+    }
 
-    tippy('#notifications', {
-        content: templatePopoverNotifications.innerHTML,
-        allowHTML: true,
-        theme: 'custom',
-        interactive: true,
-        trigger: 'click',
-    });
+    if (templatePopoverNotifications) {        
+        tippy('#notifications', {
+            content: templatePopoverNotifications.innerHTML,
+            allowHTML: true,
+            theme: 'custom',
+            interactive: true,
+            trigger: 'click',
+        });
+    }    
 });
