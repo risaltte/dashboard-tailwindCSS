@@ -3,6 +3,7 @@ import tippy from 'tippy.js';
 
 import { sidebar } from './components/sidebar';
 import { darkmode } from './components/darkmode';
+import { actionsDropdown } from './components/actionsDropdown';
 
 // CSS TippyJS
 import 'tippy.js/dist/tippy.css';
@@ -15,6 +16,7 @@ window.Alpine = Alpine;
 document.addEventListener('alpine:init', () => {
     Alpine.data('sidebar', sidebar);
     Alpine.data('darkmode', darkmode);
+    Alpine.data('actionsDropdown', actionsDropdown);
 });
 
 Alpine.start();
