@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="darkmode" x-bind:class="{'dark': darkmodeOn}">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Tailwind -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>RCursos - Nome do curso</title>
+</head>
+
+<body 
+	class="antialiased md:flex dark:bg-slate-900 bg-white text-slate-500 dark:text-slate-400" 
+	x-data="sidebar"
+>
+	<!-- Sidebar -->
+	<aside 
+		x-show="openSidebar"
+		class="flex flex-col w-64 h-screen dark:text-slate-300 fixed left-0 top-0 bottom-0 z-10 shadow border-r border-slate-900/10 dark:border-slate-700 bg-white dark:bg-gradient-to-bl dark:from-sky-950 dark:to-slate-900"
+	>
+		<div class="flex items-center justify-center mx-2 py-2 h-14 text-slate-900 dark:text-white text-2xl text-center border-b border-slate-200 dark:border-slate-600">
+			RCursos
+		</div>
+
+		<div class="flex flex-col flex-1 gap-1 px-2 py-2">
+			<a 
+				href="/index.html"
+				class="p-2 rounded px-4 hover:pl-8 hover:bg-slate-950/10 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-100 transition-all ease-in-out duration-200"	
+			>
+				<span class="text-lg font-thin"><i class="fa-solid fa-gauge"></i></span>
+				<span class="ml-2">Dashboard</span>
+			</a>
+			<a 
+				href="/courses_index.html"
+				class="p-2 rounded px-4 pl-8 border-l-4 border-l-brand-p bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-50 hover:pl-8 transition-all ease-in-out duration-200"	
+			>
+				<span class="text-lg"><i class="fa-regular fa-circle-play"></i></span>
+				<span class="ml-2">Cursos</span>
+			</a>
+			<a 
+				href="#"
+				class="p-2 rounded px-4 hover:pl-8 hover:bg-slate-950/10 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-100 transition-all ease-in-out duration-200"	
+			>
+				<span class="text-lg font-thin"><i class="fa-solid fa-tags"></i></span>
+				<span class="ml-2">Categorias</span>
+			</a>
+			<a 
+				href="#"
+				class="p-2 rounded px-4 hover:pl-8 hover:bg-slate-950/10 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-100 transition-all ease-in-out duration-200"	
+			>
+				<span class="text-lg font-thin"><i class="fa-solid fa-user-group"></i></span>
+				<span class="ml-2">Usuários</span>
+			</a>
+		</div>
+
+		<!-- Button close sidebar -->
+		<button 
+			@click="toggleSidebar"
+			class="absolute right-0 top-1/2 p-2 h-8 text-brand-p text-lg font-thin animate-pulse"
+		>
+			<i class="fa-solid fa-angles-left"></i>
+		</button>
+
+		<!-- User preferences -->
+		<div class="mx-2 border-t border-slate-200 dark:border-slate-600 relative">
+			<!-- Tooltip user preferences -->
+			<div 
+				x-show="openUserPreferencesSidebar"
+				class="py-2 w-40 rounded border border-slate-200 dark:border-slate-500 shadow-sm absolute left-2 bottom-14 z-30 bg-slate-50 dark:bg-slate-700"
+			>
+				<ul class="flex flex-col">
+					<li class="px-4 py-1 hover:bg-slate-200 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-200 transition-all">
+						<a href="#" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-gear"></i> Configurações</a>
+					</li>
+					<li class="px-4 py-1 hover:bg-slate-200 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-200 transition-all">
+						<a href="#" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-user"></i> Perfil</a>
+					</li>
+					<hr class="px-4 my-1 border-slate-900/30 dark:border-slate-500">
+					<li class="px-4 py-1 hover:bg-slate-200 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-200 transition-all">
+						<a href="login.html" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
+					</li>
+				</ul>
+			</div>
+
+			<div 
+				@click="toggleOpenUserPreferencesSidebar"
+				class="flex items-center justify-start gap-2 w-2/3 text-slate-700 dark:text-slate-300 py-4 px-2 hover:cursor-pointer"
+			>
+				<img
+					class="w-8 h-8 rounded-full"
+					src="./images/avatar-1.jpg" 
+					alt="User avatar"
+				>
+				<span class="text-sm">John Doe</span> 
+				<span x-show="!openUserPreferencesSidebar"><i class="fa-solid fa-caret-down"></i></span>
+				<span x-show="openUserPreferencesSidebar"><i class="fa-solid fa-caret-up"></i></span>
+			</div>
+		</div>
+	</aside>
+
+	<main 
+		class="flex flex-col md:flex md:flex-1 md:h-full"
+		x-bind:class="{'md:ml-64': openSidebar}"
+	>
+		<header 
+			class="fixed top-0 right-0 left-0 h-14 flex justify-between items-center p-2 border-b border-slate-900/10 dark:border-slate-300/10 bg-white dark:bg-gradient-to-r dark:from-sky-950 dark:to-slate-900"
+			x-bind:class="{'md:ml-64': openSidebar}"
+		>
+			<button 
+				@click="toggleSidebar"
+				class="mx-4 p-1 hover:brightness-75 transition-all text-brand-p"
+			>
+				<i class="fa-solid fa-bars"></i>
+			</button>
+	
+			<div class="flex justify-between items-center">
+				<div class="flex gap-4 pr-6 border-r border-slate-900/20 dark:border-slate-600">
+					<button @click="toggleDarkmode" class="p-1 mr-4 hover:brightness-125 transition-all">
+						<span x-show="darkmodeOn" class="text-yellow-500"><i class="far fa-sun"></i></span>
+						<span x-show="!darkmodeOn" class="text-blue-500"><i class="far fa-moon"></i></span>
+					</button>
+
+					<a 
+						href="#"
+						class="p-1 relative hover:brightness-75"
+						id="messages-notify"
+						data-messages="3"
+					>
+
+						<i class="fa-regular fa-envelope"></i>
+						<span class="absolute -top-1 -right-2 bg-brand-p text-white text-xs rounded-full px-1">3</span>
+					</a>
+	
+					<a 
+						href="#"
+						class="p-1 relative hover:brightness-75"
+						id="notifications"
+					>
+						<i class="fa-regular fa-bell"></i>
+						<span class="absolute -top-1 -right-2 bg-brand-p text-white text-xs rounded-full px-1">2</span>
+					</a>
+				</div>
+	
+				<div class="flex py-1 items-center gap-2 mx-4">
+					<img
+						class="w-8 h-8 rounded-full"
+						src="./images/avatar-1.jpg" 
+						alt="User avatar"
+					>
+				</div>
+			</div>
+		</header>
+
+		<!-- Content -->
+		<div class="w-full p-2 mt-14 md:p-4">
+			<h1 class="text-2xl text-slate-800 dark:text-slate-50"><i class="fa-regular fa-circle-play"></i> Cursos</h1>
+
+			<!-- Breadcrumbs -->
+			<ol class="flex items-center text-xs">
+				<li class="flex items-center">
+					<a href="index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
+						<i class="fa-solid fa-house"></i>
+					</a>
+					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
+				</li>
+
+				<li class="flex items-center">
+					<a href="courses_index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
+						Cursos
+					</a>
+					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
+				</li>
+				
+				<li class="italic text-brand-p">Nome do Curso</li>
+			</ol>
+
+			<hr class="mt-2 dark:border-slate-600">
+
+			<!-- Butons -->
+			<div class="flex items-center gap-1 mt-4">
+				<a 
+					href="courses_index.html" 
+					class="bg-brand-p text-slate-50 py-1 px-2 rounded shadow-md hover:brightness-90"
+				>
+					<i class="fas fa-arrow-left"></i> Voltar
+				</a>
+
+				<a 
+					href="courses_index.html" 
+					class="bg-brand-p text-slate-50 py-1 px-2 rounded shadow-md hover:brightness-90"
+				>
+					<i class="fas fa-pen-alt"></i> Editar
+				</a>
+
+				<a 
+					href="courses_index.html" 
+					class="bg-brand-p text-slate-50 py-1 px-2 rounded shadow-md hover:brightness-90"
+				>
+					<i class="fa-solid fa-trash-can"></i> Excluir
+				</a>
+			</div>
+			
+			<div class=" flex flex-col gap-4 mt-4 p-4 border dark:border-slate-500 rounded shadow-md">
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						#ID:
+					</div>
+					<div class="font-light">
+						1258
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Curso:
+					</div>
+					<div class="font-light">
+						Nome do Curso
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Instrutor:
+					</div>
+					<div class="font-light">
+						Nome Completo do Instrutor
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Nível:
+					</div>
+					<div class="">
+						<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 dark:bg-green-300 text-green-800 dark:text-green-700">Básico</span>
+						<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 dark:bg-yellow-300 text-yellow-800 dark:text-yellow-700">Intermediário</span>
+						<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 dark:bg-gray-300 text-gray-800 dark:text-gray-700">Avançado</span>
+					</div>
+				</div>
+
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Alunos:
+					</div>
+					<div class="font-light">
+						650 alunos
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Avaliação:
+					</div>
+					<div class="">
+						<span class="font-light">4,5</span>
+						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
+						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>						
+						<span class="text-xs ml-2">(502 avalições)</span>
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Aulas:
+					</div>
+					<div class="font-light">
+						60 aulas
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Carga horária:
+					</div>
+					<div class="font-light">
+						20 horas
+					</div>
+				</div>
+
+				<div>
+					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+						Observações:
+					</div>
+					<div class="font-light text-justify">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae similique quisquam maxime delectus blanditiis deserunt dolorum expedita nesciunt veniam voluptatum incidunt ratione dignissimos, doloribus pariatur corporis molestias, reprehenderit distinctio magnam!
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+	</main>
+
+	<!-- Template tooltip messages-->
+	<template id="templateTooltipMessahes">
+		<span>Você possui novas mensagens.</span>
+	</template>
+
+	<!-- Template  popover notifications-->
+	<template id="templatePopoverNotifications">
+		<div class="text-slate-600 dark:text-slate-400">
+			<div class="bg-gray-100 p-2 border-y border-gray-400 dark:border-slate-500 text-base dark:bg-slate-600 dark:text-slate-200">
+				Notificações
+			</div>
+
+			<div class="flex items-center gap-2 h-20 px-2 py-2 border-b dark:text-slate-300 border-gray-200 dark:border-slate-600">
+				<div class="flex items-center flex-shrink-0">
+					<img
+						class="w-8 h-8 rounded-full"
+						src="./images/robo-avatar-1.png" 
+						alt="User avatar"
+					>
+				</div>
+
+				<div class="">
+					<div class="text-sm font-light break-words line-clamp-2">
+						O curso <span class="text-slate-300 font-medium">PHP</span> está em alta. 200 novas matrículas.
+					</div>
+					<div class="text-xs font-thin">
+						2 minutos atrás.
+					</div>
+				</div>
+			</div>
+
+			<div class="flex items-center gap-2 h-20 px-2 py-2 border-b dark:text-slate-300 border-gray-200 dark:border-slate-600">
+				<div class="flex items-center flex-shrink-0">
+					<img
+						class="w-8 h-8 rounded-full"
+						src="./images/avatar-4.jpg" 
+						alt="User avatar"
+					>
+				</div>
+
+				<div class="">
+					<div class="text-sm font-light break-words line-clamp-2">					
+						<span class="text-slate-300 font-normal">Ruben Tillman</span> comprou o curso <span class="text-slate-300 font-medium">Laravel</span>.
+					</div>
+					<div class="text-xs font-thin">
+						3 minutos atrás.
+					</div>
+				</div>
+			</div>
+
+			<div class="flex items-center gap-2 h-20 px-2 py-2 border-b dark:text-slate-300 border-gray-200 dark:border-slate-600">
+				<div class="flex items-center flex-shrink-0">
+					<img
+						class="w-8 h-8 rounded-full"
+						src="./images/avatar-3.jpg" 
+						alt="User avatar"
+					>
+				</div>
+
+				<div class="">
+					<div class="text-sm font-light break-words line-clamp-2">					
+						<span class="text-slate-300 font-normal">Bob Joe</span> abriu um novo tópico do fórum <span class="text-slate-300 font-medium">Javascript</span>
+					</div>
+					<div class="text-xs font-thin">
+						4 minutos atrás.
+					</div>
+				</div>
+			</div>
+
+			<div class="text-sm text text-slate-600 dark:text-slate-200 text-center font-normal p-2">
+				<a href="#" class="p-1 hover:brightness-75 dark:brightness-80">Ver todas</a>
+			</div>
+		</div>
+	</template>
+  
+	<script type="module" src="/main.js"></script>
+  </body>
+
+</html>
