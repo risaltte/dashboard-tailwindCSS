@@ -12,7 +12,7 @@
 	<!-- Tailwind -->
 	<link rel="stylesheet" href="style.css">
 
-	<title>RCursos - Nome do curso | Detalhes</title>
+	<title>RCursos - Nome do curso | Editar</title>
 </head>
 
 <body 
@@ -176,8 +176,15 @@
 					</a>
 					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
 				</li>
+
+				<li class="flex items-center">
+					<a href="courses_view.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
+						Nome do curso
+					</a>
+					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
+				</li>
 				
-				<li class="italic text-brand-p">Nome do Curso</li>
+				<li class="italic text-brand-p">Editar</li>
 			</ol>
 
 			<hr class="mt-2 dark:border-slate-600">
@@ -190,120 +197,89 @@
 				>
 					<i class="fas fa-arrow-left"></i> Voltar
 				</a>
-
-				<a 
-					href="courses_edit.html" 
-					class="bg-brand-p text-slate-50 py-1 px-2 rounded shadow-md hover:brightness-90"
-				>
-					<i class="fas fa-pen-alt"></i> Editar
-				</a>
-
-				<a 
-					href="courses_index.html" 
-					class="bg-brand-p text-slate-50 py-1 px-2 rounded shadow-md hover:brightness-90"
-				>
-					<i class="fa-solid fa-trash-can"></i> Excluir
-				</a>
 			</div>
 			
-			<div class=" flex flex-col gap-4 mt-4 p-4 border dark:border-slate-500 rounded shadow-md">	
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Curso:
-					</div>
-					<div class="font-light">
-						Nome do Curso
-					</div>
-				</div>				
+			<form class="flex flex-col gap-4 mt-4 p-4 border dark:border-slate-500 rounded shadow-md">	
+				<h2 class="text-xl text-slate-700 dark:text-slate-200 border-b dark:border-slate-600 pb-2">
+					<i class="fas fa-pen-alt"></i> Editar curso: <span class="text-lg text-brand-p">Nome do curso</span>
+				</h2>
 
 				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
+					<label for="name" class="block text-sm font-medium dark:text-slate-300">
+						Nome:
+					</label>
+					<div class="mt-1">
+						<input id="name" name="name" type="text" value="Nome do curso" required placeholder="Digite o nome do curso"> 
+					</div>
+				</div>
+
+				<div>
+					<label for="instructor" class="block text-sm font-medium dark:text-slate-300">
 						Instrutor:
+					</label>
+					<select class="mt-1" id="instructor" name="instructor">
+						<option value="">Selecione</option>
+						<option value="1" selected>Antônio Guimarães</option>
+						<option value="2">João da Silva</option>
+						<option value="3">Mauro José Borges</option>
+						<option value="4">Caio Martins</option>
+						<option value="5">Felipe Silveira</option>
+					</select>
+				</div>
+
+				<div class=" lg:flex lg:items-center lg:gap-4 text-sm text-justify">
+					<span class="text-sm font-medium dark:text-slate-300">Nível:</span>
+					<div>
+						<input type="checkbox" name="level[]" id="basic" checked required>
+						<label 
+							for="basic"
+						>
+							Básico
+						</label>
 					</div>
-					<div class="flex items-center gap-1 font-light">
-						<div class="flex py-1 items-center gap-2">
-							<img
-								class="w-8 h-8 rounded-full"
-								src="./images/avatar-4.jpg" 
-								alt="User avatar"
-							>
-						</div>
-						<span>Nome do Instrutor</span>
+					<div>
+						<input type="checkbox" name="level[]" id="intermediary" checked required>
+						<label 
+							for="intermediary"
+						>
+							Intermediário
+						</label>
+					</div>
+					<div>
+						<input type="checkbox" name="level[]" id="advanced" required>
+						<label 
+							for="advanced"
+						>
+							Avançado
+						</label>
 					</div>
 				</div>
 
 				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						#ID:
-					</div>
-					<div class="font-light">
-						1258
-					</div>
+					<label for="description" class="mb-1 block text-sm font-medium dark:text-slate-300">
+						Descrição:
+					</label>
+					<textarea data-tinny class="mt-1" id="description" name="description" rows="7" required>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi quod a, eaque alias est! Explicabo quaerat illo corrupti ut eligendi, quam deleniti expedita officiis odit distinctio pariatur. Et, sapiente!
+					</textarea>
 				</div>
 
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Nível:
-					</div>
-					<div class="">
-						<span class="text-xs font-normal py-1 px-2 rounded-full bg-green-400 dark:bg-green-300 text-green-800 dark:text-green-700">Básico</span>
-						<span class="text-xs font-normal py-1 px-2 rounded-full bg-yellow-400 dark:bg-yellow-300 text-yellow-800 dark:text-yellow-700">Intermediário</span>
-						<span class="text-xs font-normal py-1 px-2 rounded-full bg-gray-400 dark:bg-gray-300 text-gray-800 dark:text-gray-700">Avançado</span>
-					</div>
-				</div>
+				<div class="flex items-center gap-1">
+					<a 
+						href="courses_index.html"
+						class="py-1 px-2 text-brand-p border rounded dark:border-slate-500 bg-transparent hover:brightness-90 dark:hover:brightness-125 transition-all"
+					>
+						<i class="fas fa-ban"></i> Cancelar
+					</a>
 
-
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Alunos:
-					</div>
-					<div class="font-light">
-						650 alunos
-					</div>
+					<button 
+						class="py-1 px-2 rounded bg-brand-p text-white hover:brightness-90 dark:hover:brightness-125 transition-all"
+						type="submit"
+					>
+						<i class="far fa-save"></i> Salvar
+					</button>
 				</div>
-
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Avaliação:
-					</div>
-					<div class="">
-						<span class="font-light">4,5</span>
-						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
-						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
-						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
-						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star"></i></span>
-						<span class="text-xs text-yellow-400 dark:text-yellow-300"><i class="fa-solid fa-star-half-stroke"></i></span>						
-						<span class="text-xs ml-2">(502 avalições)</span>
-					</div>
-				</div>
-
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Aulas:
-					</div>
-					<div class="font-light">
-						60 aulas
-					</div>
-				</div>
-
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Carga horária:
-					</div>
-					<div class="font-light">
-						20 horas
-					</div>
-				</div>
-
-				<div>
-					<div class="text-slate-600 dark:text-slate-300 font-medium text-sm">
-						Observações:
-					</div>
-					<div class="font-light text-justify">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae similique quisquam maxime delectus blanditiis deserunt dolorum expedita nesciunt veniam voluptatum incidunt ratione dignissimos, doloribus pariatur corporis molestias, reprehenderit distinctio magnam!
-					</div>
-				</div>
-			</div>
+			</form>
 			
 		</div>
 
@@ -382,8 +358,8 @@
 				<a href="#" class="p-1 hover:brightness-75 dark:brightness-80">Ver todas</a>
 			</div>
 		</div>
-	</template>
-  
+	</template>  
+
 	<script type="module" src="/main.js"></script>
   </body>
 
