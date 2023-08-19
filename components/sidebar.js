@@ -8,9 +8,9 @@ export function sidebar() {
             this.openSidebar = !this.openSidebar;
             this.openUserPreferencesSidebar = false;
 
-            let isMediumScreen = window.innerWidth >= this.MediumScreen;
+            let isSmallScreen = window.innerWidth < this.MediumScreen;
 
-            if (!isMediumScreen) {
+            if (isSmallScreen) {
                 this.$refs.sidebar.classList.toggle('-ml-[500px]');
 
                 return;
