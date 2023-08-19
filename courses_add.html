@@ -21,8 +21,8 @@
 >
 	<!-- Sidebar -->
 	<aside 
-		x-show="openSidebar"
-		class="flex flex-col w-64 h-screen dark:text-slate-300 fixed left-0 top-0 bottom-0 z-10 shadow border-r border-slate-900/10 dark:border-slate-700 bg-white dark:bg-gradient-to-bl dark:from-sky-950 dark:to-slate-900"
+		class="-ml-[500px] md:ml-0 flex flex-col w-64 h-screen dark:text-slate-300 fixed left-0 top-0 bottom-0 z-10 shadow border-r border-slate-900/10 dark:border-slate-700 bg-white dark:bg-gradient-to-bl dark:from-sky-950 dark:to-slate-900"
+		x-ref="sidebar"
 	>
 		<div class="flex items-center justify-center mx-2 py-2 h-14 text-slate-900 dark:text-white text-2xl text-center border-b border-slate-200 dark:border-slate-600">
 			RCursos
@@ -104,13 +104,13 @@
 		</div>
 	</aside>
 
-	<main 
-		class="flex flex-col md:flex md:flex-1 md:h-full"
-		x-bind:class="{'md:ml-64': openSidebar}"
+	<main  
+		class="flex flex-col md:flex md:flex-1 md:h-full md:ml-64"
+		x-ref="main"
 	>
 		<header 
-			class="fixed top-0 right-0 left-0 h-14 flex justify-between items-center p-2 border-b border-slate-900/10 dark:border-slate-300/10 bg-white dark:bg-gradient-to-r dark:from-sky-950 dark:to-slate-900"
-			x-bind:class="{'md:ml-64': openSidebar}"
+			class="fixed md:ml-64 top-0 right-0 left-0 h-14 flex justify-between items-center p-2 border-b border-slate-900/10 bg-white dark:border-slate-300/10 dark:bg-gradient-to-r dark:from-sky-950 dark:to-slate-900"
+			x-ref="header"
 		>
 			<button 
 				@click="toggleSidebar"
