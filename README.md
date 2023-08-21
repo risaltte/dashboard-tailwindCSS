@@ -57,10 +57,25 @@ Dashboard Template with Tailwind CSS is a dummy admin template created to apply 
 <p>
     The layout was made from some inspirations in other dashboard templates available on the internet.
 </p>
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 16px;">
-  <img src=".github/img/desktop.png" width="400px" alt="Desktop Layout">
 
-  <img src=".github/img/mobile.png" width="400px" alt="Mobile Layout">
+<p align="center">
+  <img src=".github/img/desktop-light-1.png" alt="Layout Light">
+</p>
+
+<p align="center">
+  <img src=".github/img/desktop-dark-1.png" alt="Layout Light">
+</p>
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 16px;">
+  <img src=".github/img/mobile-light-1.png" width="400px" alt="Desktop Layout">
+
+  <img src=".github/img/mobile-dark-1.png" width="400px" alt="Mobile Layout">
+</p>
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 16px;">
+  <img src=".github/img/mobile-light-2.png" width="400px" alt="Desktop Layout">
+
+  <img src=".github/img/mobile-dark-2.png" width="400px" alt="Mobile Layout">
 </p>
 
 <br />
