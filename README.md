@@ -40,7 +40,7 @@
 </p>
 
 <p align="center">
-  <img src=".github/desktop.png" alt="Layout">
+  <img src=".github/img/desktop.png" alt="Layout">
 </p>
 
 <h4 align="center">
@@ -58,7 +58,7 @@ Dashboard Template with Tailwind CSS is a dummy admin template created to apply 
     The layout was made from some inspirations in other dashboard templates available on the internet.
 </p>
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 16px;">
-  <img src=".github/img/desktop.pgn" width="400px" alt="Desktop Layout">
+  <img src=".github/img/desktop.png" width="400px" alt="Desktop Layout">
 
   <img src=".github/img/mobile.png" width="400px" alt="Mobile Layout">
 </p>
