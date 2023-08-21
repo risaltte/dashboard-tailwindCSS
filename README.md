@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  Template admin dashboard with Tailwind CSS.
+ Admin Template Dashboard with Tailwind CSS.
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@
 </p>
 
 <h4 align="center">
-  	🚧 Template Admin Dashboard with Tailwind CSS | Done 🚧
+  	🚧 Admin Template Dashboard with Tailwind CSS | Done 🚧
 </h4>
 
 <h2 id="about">
