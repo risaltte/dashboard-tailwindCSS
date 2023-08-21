@@ -125,7 +125,7 @@ $ npm run dev
 ```
 
 <h2 id="demo">🧪 Demo</h2>
-<a style="margin-left: 16px" href="https://risaltte.github.io/design-system/" target="_blank">
+<a style="margin-left: 16px" href="#" target="_blank">
 <!-- Link externo ou local(.github). -->
   <img src="https://img.shields.io/badge/github-%231877F2.svg?&style=for-the-badge&logo=github&logoColor=white&color=black" />
 </a>
