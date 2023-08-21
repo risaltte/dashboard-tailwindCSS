@@ -1,16 +1,19 @@
 <h1 align="center" id="project_name">
   <br />          
-    <img height="120" width="120" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />  
+    <img height="120" width="120" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+    <img height="120" width="120" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+    <img height="120" width="120" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /> 
   <br />
 </h1>
 
 <p align="center">
-  Design System with Storybook.
+  Template admin dashboard with Tailwind CSS.
 </p>
 
 <p align="center">
   <!-- GitHub last commit -->
-  <a href="https://github.com/risaltte/design-system/commits/master">
+  <a href="https://github.com/risaltte/dashboard-tailwindCSS/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/risaltte/design-system?color=81D8F7">
   </a>
   <!-- GitHub language count -->
@@ -22,7 +25,7 @@
   <!-- Repository status -->
   <img src="https://www.repostatus.org/badges/latest/unsupported.svg">
   <!-- Link repo -->
-  <a href="https://github.com/risaltte/design-system/blob/master/LICENSE">
+  <a href="https://github.com/risaltte/dashboard-tailwindCSS/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/risaltte/design-system?color=81D8F7" alt="License">
   </a>
 </p>
@@ -42,25 +45,23 @@
 </p>
 
 <h4 align="center">
-  	🚧 Lab Design System | Done 🚧
+  	🚧 Template Admin Dashboard with Tailwind CSS | Done 🚧
 </h4>
 
 <h2 id="about">
 💻 About
 </h2>
 
-Lab Design System is a fictional design system built to apply the knowledge of [Storybook](https://storybook.js.org/), [Tailwindcss](https://tailwindcss.com/) and [React](https://reactjs.org/).
-
-Project developed during the event Ignite Lab of [Rocketseat](https://www.rocketseat.com.br/).
+Template Dashboard wit Tailwind CSS is a fictional admin template built to apply the knowledge of [Tailwindcss](https://tailwindcss.com/) and [AlpineJS](https://alpinejs.dev/).
 
 <h2 id="layout">🎨 Layout</h2>
-<a href="https://www.figma.com/file/dW2yBl9Fu1OrkNYxu6rgbl/Lab-Design-System?node-id=0%3A1">
-  <img alt="Made by Rocketseat" src="https://img.shields.io/badge/See%20on%20-Figma-81D8F7">
-</a>
+<p>
+    The layout was made from some inspirations in other dashboard templates available on the internet.
+</p>
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 16px;">
-  <img src=".github/img/logIn.png" width="400px" alt="Log In page">
+  <img src=".github/img/desktop.gif" width="400px" alt="Desktop Layout">
 
-  <img src=".github/img/components.png" width="400px" alt="Components">
+  <img src=".github/img/mobile.gif" width="400px" alt="Mobile Layout">
 </p>
 
 <br />
@@ -68,21 +69,18 @@ Project developed during the event Ignite Lab of [Rocketseat](https://www.rocket
 
 The following tools were used in the construction of the project:
 
-- **[React](https://reactjs.org/)**
-- **[TypeScript](https://www.typescriptlang.org/)**
 - **[Tailwind](https://tailwindcss.com/)**
-- **[Radix UI](https://www.radix-ui.com/)**
-- **[Storybook](https://storybook.js.org/)**
+- **[AlpineJS](https://alpinejs.dev/)**
 - **[Vite](https://vitejs.dev/)**
 
 > See more [package.json](package.json)
 
 **Utilities**
 
-- API: **[Axios](https://axios-http.com/docs/intro)**
-- IDE: **[Visual Studio Code](https://code.visualstudio.com/)**
-- Icons: **[React Icons](https://phosphoricons.com/)**
-- Fonts: **[Inter](https://fonts.google.com/specimen/Inter)**
+
+- Tooltips | Popover: **[TippyJS](https://tippyjs.bootcss.com/)**
+- Cookie management: **[JS-Cookie](https://www.npmjs.com/package/js-cookie)**
+- Icons: **[Fontawesome](https://fontawesome.com/)**
 
 <h2 id="prerequisites">💿 How to run the project</h2>
 
@@ -97,10 +95,10 @@ Before you start, you will need to have the following tools installed on your ma
 
 ```bash
 # Clone repo
-$ git clone https://github.com/risaltte/design-system.git
+$ git clone https://github.com/risaltte/dashboard-tailwindCSS.git
 
 # Access the project folder in the terminal/cmd
-$ cd design-system
+$ cd dashboard-tailwindCSS
 
 # Install the dependencies (npm or yarn)
 $ npm install
@@ -108,20 +106,14 @@ $ npm install
 # Run the application in development mode
 $ npm run dev
 
-# see on http://127.0.0.1:5173/
-# If you want to see the components in Storybook: 
-$ npm run storybook
+# see on http://localhost:5173
 
 ```
 
 <h2 id="demo">🧪 Demo</h2>
-<a href="https://design-system-risaltte.vercel.app/" target="_blank">
-<!-- Link externo ou local(.github). -->
-  <img src=".github/img/vercel_button.png">  
-</a>
 <a style="margin-left: 16px" href="https://risaltte.github.io/design-system/" target="_blank">
 <!-- Link externo ou local(.github). -->
-  <img src=".github/img/storybook_button.png">  
+  <img src="https://img.shields.io/badge/github-%231877F2.svg?&style=for-the-badge&logo=github&logoColor=white&color=black" />
 </a>
 
 <h2 id="author">🦸 Autor</h2>
