@@ -51,7 +51,7 @@
 💻 About
 </h2>
 
-Template Dashboard wit Tailwind CSS is a fictional admin template built to apply the knowledge of [Tailwindcss](https://tailwindcss.com/) and [AlpineJS](https://alpinejs.dev/).
+Dashboard Template with Tailwind CSS is a dummy admin template created to apply knowledge of [Tailwindcss](https://tailwindcss.com/) and [AlpineJS](https://alpinejs.dev/). The Template is responsive and has dark mode support.
 
 <h2 id="layout">🎨 Layout</h2>
 <p>
