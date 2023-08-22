@@ -125,9 +125,9 @@ $ npm run dev
 ```
 
 <h2 id="demo">🧪 Demo</h2>
-<a style="margin-left: 16px" href="#" target="_blank">
+<a href="https://dashboard-tailwind-css.vercel.app" target="_blank">
 <!-- Link externo ou local(.github). -->
-  <img src="https://img.shields.io/badge/github-%231877F2.svg?&style=for-the-badge&logo=github&logoColor=white&color=black" />
+  <img src=".github/img/vercel_button.png">  
 </a>
 
 <h2 id="author">🦸 Autor</h2>
