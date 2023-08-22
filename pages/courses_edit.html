@@ -10,9 +10,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- Tailwind -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../style.css">
 
-	<title>RCursos - Novo curso</title>
+	<title>RCursos - Nome do curso | Editar</title>
 </head>
 
 <body 
@@ -30,14 +30,14 @@
 
 		<div class="flex flex-col flex-1 gap-1 px-2 py-2">
 			<a 
-				href="/index.html"
+				href="../index.html"
 				class="p-2 rounded px-4 hover:pl-8 hover:bg-slate-950/10 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-100 transition-all ease-in-out duration-200"	
 			>
 				<span class="text-lg font-thin"><i class="fa-solid fa-gauge"></i></span>
 				<span class="ml-2">Dashboard</span>
 			</a>
 			<a 
-				href="/courses_index.html"
+				href="./courses_index.html"
 				class="p-2 rounded px-4 pl-8 border-l-4 border-l-brand-p bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-50 hover:pl-8 transition-all ease-in-out duration-200"	
 			>
 				<span class="text-lg"><i class="fa-regular fa-circle-play"></i></span>
@@ -83,7 +83,7 @@
 					</li>
 					<hr class="px-4 my-1 border-slate-900/30 dark:border-slate-500">
 					<li class="px-4 py-1 hover:bg-slate-200 dark:hover:bg-slate-950/40 hover:text-slate-600 dark:hover:text-slate-200 transition-all">
-						<a href="login.html" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
+						<a href="./login.html" class="font-light text-sm inline-block w-full"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
 					</li>
 				</ul>
 			</div>
@@ -94,7 +94,7 @@
 			>
 				<img
 					class="w-8 h-8 rounded-full"
-					src="./images/avatar-1.jpg" 
+					src="/images/avatar-1.jpg" 
 					alt="User avatar"
 				>
 				<span class="text-sm">John Doe</span> 
@@ -104,7 +104,7 @@
 		</div>
 	</aside>
 
-	<main  
+	<main 
 		class="flex flex-col md:flex md:flex-1 md:h-full md:ml-64"
 		x-ref="main"
 	>
@@ -150,7 +150,7 @@
 				<div class="flex py-1 items-center gap-2 mx-4">
 					<img
 						class="w-8 h-8 rounded-full"
-						src="./images/avatar-1.jpg" 
+						src="/images/avatar-1.jpg" 
 						alt="User avatar"
 					>
 				</div>
@@ -164,20 +164,27 @@
 			<!-- Breadcrumbs -->
 			<ol class="flex items-center text-xs">
 				<li class="flex items-center">
-					<a href="index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
+					<a href="../index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
 						<i class="fa-solid fa-house"></i>
 					</a>
 					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
 				</li>
 
 				<li class="flex items-center">
-					<a href="courses_index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
+					<a href="./courses_index.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
 						Cursos
 					</a>
 					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
 				</li>
+
+				<li class="flex items-center">
+					<a href="./courses_view.html" class="flex items-center p-1 hover:underline hover:text-slate-600 dark:hover:text-slate-300">
+						Nome do curso
+					</a>
+					<span class="mx-1"><i class="fa-solid fa-chevron-right"></i></span>
+				</li>
 				
-				<li class="italic text-brand-p">Novo curso</li>
+				<li class="italic text-brand-p">Editar</li>
 			</ol>
 
 			<hr class="mt-2 dark:border-slate-600">
@@ -185,7 +192,7 @@
 			<!-- Butons -->
 			<div class="flex items-center gap-1 mt-4">
 				<a 
-					href="courses_index.html" 
+					href="./courses_index.html" 
 					class="bg-brand-p text-slate-50 py-1 px-2 rounded shadow-md hover:brightness-90"
 				>
 					<i class="fas fa-arrow-left"></i> Voltar
@@ -194,7 +201,7 @@
 			
 			<form class="flex flex-col gap-4 mt-4 p-4 border dark:border-slate-500 rounded shadow-md">	
 				<h2 class="text-xl text-slate-700 dark:text-slate-200 border-b dark:border-slate-600 pb-2">
-					<i class="fas fa-plus"></i> Adicionar novo curso
+					<i class="fas fa-pen-alt"></i> Editar curso: <span class="text-lg text-brand-p">Nome do curso</span>
 				</h2>
 
 				<div>
@@ -202,7 +209,7 @@
 						Nome:
 					</label>
 					<div class="mt-1">
-						<input id="name" name="name" type="text" required placeholder="Digite o nome do curso"> 
+						<input id="name" name="name" type="text" value="Nome do curso" required placeholder="Digite o nome do curso"> 
 					</div>
 				</div>
 
@@ -212,7 +219,7 @@
 					</label>
 					<select class="mt-1" id="instructor" name="instructor">
 						<option value="">Selecione</option>
-						<option value="1">Antônio Guimarães</option>
+						<option value="1" selected>Antônio Guimarães</option>
 						<option value="2">João da Silva</option>
 						<option value="3">Mauro José Borges</option>
 						<option value="4">Caio Martins</option>
@@ -223,7 +230,7 @@
 				<div class=" lg:flex lg:items-center lg:gap-4 text-sm text-justify">
 					<span class="text-sm font-medium dark:text-slate-300">Nível:</span>
 					<div>
-						<input type="checkbox" name="level[]" id="basic" required>
+						<input type="checkbox" name="level[]" id="basic" checked>
 						<label 
 							for="basic"
 						>
@@ -231,7 +238,7 @@
 						</label>
 					</div>
 					<div>
-						<input type="checkbox" name="level[]" id="intermediary" required>
+						<input type="checkbox" name="level[]" id="intermediary" checked>
 						<label 
 							for="intermediary"
 						>
@@ -239,7 +246,7 @@
 						</label>
 					</div>
 					<div>
-						<input type="checkbox" name="level[]" id="advanced" required>
+						<input type="checkbox" name="level[]" id="advanced">
 						<label 
 							for="advanced"
 						>
@@ -253,13 +260,13 @@
 						Descrição:
 					</label>
 					<textarea data-tinny class="mt-1" id="description" name="description" rows="7" required>
-					
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nisi quod a, eaque alias est! Explicabo quaerat illo corrupti ut eligendi, quam deleniti expedita officiis odit distinctio pariatur. Et, sapiente!
 					</textarea>
 				</div>
 
 				<div class="flex items-center gap-1">
 					<a 
-						href="courses_index.html"
+						href="./courses_index.html"
 						class="py-1 px-2 text-brand-p border rounded dark:border-slate-500 bg-transparent hover:brightness-90 dark:hover:brightness-125 transition-all"
 					>
 						<i class="fas fa-ban"></i> Cancelar
@@ -294,7 +301,7 @@
 				<div class="flex items-center flex-shrink-0">
 					<img
 						class="w-8 h-8 rounded-full"
-						src="./images/robo-avatar-1.png" 
+						src="/images/robo-avatar-1.png" 
 						alt="User avatar"
 					>
 				</div>
@@ -313,7 +320,7 @@
 				<div class="flex items-center flex-shrink-0">
 					<img
 						class="w-8 h-8 rounded-full"
-						src="./images/avatar-4.jpg" 
+						src="/images/avatar-4.jpg" 
 						alt="User avatar"
 					>
 				</div>
@@ -332,7 +339,7 @@
 				<div class="flex items-center flex-shrink-0">
 					<img
 						class="w-8 h-8 rounded-full"
-						src="./images/avatar-3.jpg" 
+						src="/images/avatar-3.jpg" 
 						alt="User avatar"
 					>
 				</div>
