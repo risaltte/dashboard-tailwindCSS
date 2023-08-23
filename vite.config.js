@@ -1,6 +1,7 @@
 import {resolve} from 'path';
 
 export default {
+    base: process.env.VITE_BASE_URL || '/',
     server: {
         host: '0.0.0.0'
     },
