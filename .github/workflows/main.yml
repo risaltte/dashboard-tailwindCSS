@@ -35,6 +35,9 @@ jobs:
         run: echo "VITE_BASE_URL=/dashboard-tailwindCSS/" >> $GITHUB_ENV
         if: ${{ github.ref == 'refs/heads/main' }}
 
+      - name: Debug VITE_BASE_URL
+        run: echo "VITE_BASE_URL: $VITE_BASE_URL"
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
